@@ -6,11 +6,16 @@ In the pre-built project we have the "standard platooning" multi-model with 3 fo
 The plant of every car has been modeled in OpenModelica (models can be found in the "Models" folder) while the control algorithm is the Cooperative Adaptive Cruise Control (CACC), which establishes a fixed distance between the cars and guarantees "string stability" i.e. perturbations at the head of the platoon smoothly propagates to the tail.
 
 ## Attacked scenarios
-![plot](PlatoonAttacked.jpg)
-In the prebuilt project there are also 3 possible scenarios
+
+In the prebuilt project there are also 3 MultiModels that include a data alteration attack:
+1. in  "acc_LC_inf" an attack FMU alters the acceleration from the leader to the first following car, increasing the value by 2 m/s^2 starting from time 10. The resulting architecture is shown in ![plot](PlatoonAttacked.jpg)
+2. in "acc_LC_period" an attack FMU alters the acceleration from the leader to the first following car, periodically increasing the value by 1 m/s^2 starting from time 10. The attack is shown in ![plot](PeriodicattackGraph.png)
+3. in  "speed_LC_inf" an attack FMU alters the speed from the leader to the first following car, increasing the value by 14 m/s starting from time 10. It is possible to see that at time 19.2 the following car overtakes the lead car, which means that the cars crashed.
+![plot](SpeedattackGraph.png) 
+
 # Requirements
  1. Linux-like OS (currently tested on Ubuntu 16 and Ubuntu 20)
- 4. INTO-CPS Application, downloadable [here](https://into-cps-association.github.io/download/)
+ 2. INTO-CPS Application, downloadable [here](https://into-cps-association.github.io/download/)
  
 # Instructions for co-simulation
 
