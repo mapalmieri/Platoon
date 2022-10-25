@@ -36,7 +36,7 @@ The models are taken from “S. Pedone, A. Fagiolini, Racecar Longitudinal Contr
  1. Linux-like OS (currently tested on Ubuntu 16 and Ubuntu 20)
  2. INTO-CPS Application, downloadable [here](https://into-cps-association.github.io/download/)
  3. MATLAB version 2021a 
-## Scenario Comparions
+## Scenario Comparisons
 
 In the pre-built project "platoon_with_dynamic_car_model" we have the "PlatoonSine" multi-model with 3 following cars and a leading car.
 The plant of every follower car has been modeled in Simulink (models can be found in the "Models" folder) while the leader car is still modeled with OpenModelica.
