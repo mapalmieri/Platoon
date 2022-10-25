@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fmiModelDescription 	fmiVersion="2.0"
+						modelName="DomenicoV_caccAlg"
+						guid="{abb4bff1-d423-4e02-90d9-011f519869ff}"
+						description=""
+						author="..author name.."
+						version="Version 1"
+						copyright=""
+						license="PVS License"
+						generationTool="PVSio-web"
+						variableNamingConvention="flat"
+						numberOfEventIndicators="0">
+	<CoSimulation 	modelIdentifier="DomenicoV_caccAlg"
+					needsExecutionTool="false"
+					canHandleVariableCommunicationStepSize="true"
+					canInterpolateInputs="false"
+					maxOutputDerivativeOrder="0"
+					canRunAsynchronuously="false"
+					canBeInstantiatedOnlyOncePerProcess="false"
+					canNotUseMemoryManagementFunctions="true"
+					canGetAndSetFMUstate="false"
+					canSerializeFMUstate="false"
+					providesDirectionalDerivative="false">
+		</CoSimulation>
+	<LogCategories>
+		<Category name="logAll" />
+		<Category name="logError" />
+		<Category name="logFmiCall" />
+		<Category name="Protocol" />
+		<Category name="Error" />
+	</LogCategories>
+
+	<ModelVariables>
+		<ScalarVariable name="acc_leader" valueReference="1" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="acc_prec" valueReference="2" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="accdes" valueReference="3" causality="output" variability="continuous" ><Real  /></ScalarVariable>
+    
+		<ScalarVariable name="C1_weight" valueReference="4" causality="input" variability="continuous"   ><Real start="0.5" /></ScalarVariable>
+    
+		<ScalarVariable name="controllerBandwidth" valueReference="5" causality="input" variability="continuous"   ><Real start="0.2" /></ScalarVariable>
+    
+		<ScalarVariable name="dampingRatio" valueReference="6" causality="input" variability="continuous"   ><Real start="1" /></ScalarVariable>
+    
+		<ScalarVariable name="in_x" valueReference="7" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="in_x_leader" valueReference="8" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="in_x_prec" valueReference="9" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="precVehicleLenght" valueReference="10" causality="input" variability="continuous"   ><Real start="4" /></ScalarVariable>
+    
+		<ScalarVariable name="speed_leader" valueReference="11" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="speed_me" valueReference="12" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="speed_prec" valueReference="13" causality="input" variability="continuous" ><Real start="0" /></ScalarVariable>
+    
+		<ScalarVariable name="targetDistance" valueReference="14" causality="input" variability="continuous"   ><Real start="15" /></ScalarVariable>
+    </ModelVariables>
+
+	<ModelStructure>
+	<Outputs>
+			<Unknown index="3"  dependencies=""/>
+            
+	</Outputs>
+
+	</ModelStructure>
+</fmiModelDescription>
